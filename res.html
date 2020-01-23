@@ -17,9 +17,12 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
     </script>
+    <link rel="stylesheet" href="assets/bootswatch.css">
 </head>
 
 <body>
+
+
 
     <!-- // Make Reservations -->
 
@@ -85,20 +88,21 @@
 
     <script type="text/javascript">
         // Question: What does this code do?
-        $("#add-btn").on("click", function (event) {
+        $("#make-reservation").on("click", function (event) {
             event.preventDefault();
-            var newCharacter = {
+            var newRes = {
                 name: $("#name").val().trim(),
-                role: $("#role").val().trim(),
-                age: $("#age").val().trim(),
-                forcePoints: $("#force-points").val().trim()
+                phone: $("#phone").val().trim(),
+                email: $("#email").val().trim(),
+                date: $("#date").val().trim(),
+                time: $("#time").val().trim()
             };
 
-            // Question: What does this code do??
-            $.post("/api/characters", newCharacter)
+            // post new res -- reference correct array name? 
+            $.post("/api/tables", newRes)
                 .then(function (data) {
-                    console.log("add.html", data);
-                    alert("Adding character...");
+                    console.log("add.html", res);
+                    alert("Adding reservation...");
                 });
         });
     </script>
