@@ -1,5 +1,18 @@
-// reservation and list
+const express = request("express");
 
-//first 5 can set reservation
+const app = express();
 
-//anything after needs to be appended to a list
+
+
+
+
+//========= Reservation List ============
+
+
+
+//========= Create List =============
+
+
+
+//========= Waiting List =====
+
