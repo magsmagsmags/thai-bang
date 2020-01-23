@@ -14,6 +14,7 @@ app.use(express.json());
 
 //array 
 const resList = [];
+// console.log(resList);
 
 const waitList = [];
 
