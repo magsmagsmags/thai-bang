@@ -4,7 +4,7 @@ const path = require("path");
 
 // Set up express
 const app = express();
-const PORT = 3005;
+const PORT = process.env.PORT || 3005;
 
 //Set handle data parsing
 app.use(express.urlencoded({
